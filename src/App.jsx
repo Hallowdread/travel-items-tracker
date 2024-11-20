@@ -8,4 +8,10 @@ export default function App() {
   );
 }
 
-const Logo = () => {};
+const Logo = () => {
+  return (
+    <header>
+      <h1>🌴FAR AWAY💼</h1>
+    </header>
+  );
+};
