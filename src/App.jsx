@@ -67,7 +67,6 @@ const List = ({ itemObj }) => {
     </li>
   );
 };
-
 //* Props Validation for List
 List.propTypes = {
   itemObj: PropTypes.shape({
