@@ -6,7 +6,7 @@ An App That Keeps Track of Your Travel Items
 
 ## Live Site
 
-Check out the live site [here](travel-items-tracker.vercel.app).
+Check out the live site [here](https://travel-items-tracker.vercel.app/).
 
 ## Description
 
