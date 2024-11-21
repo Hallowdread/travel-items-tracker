@@ -13,6 +13,7 @@ export default function App() {
       <Logo />
       <Form />
       <PackingList />
+      <Stats />
     </div>
   );
 }
@@ -71,8 +72,17 @@ const List = ({ itemObj }) => {
 List.propTypes = {
   itemObj: PropTypes.shape({
     description: PropTypes.string.isRequired,
-    id: PropTypes.number.string.isRequired,
+    id: PropTypes.number.isRequired,
     quantity: PropTypes.number.isRequired,
     packed: PropTypes.bool,
   }).isRequired,
+};
+
+//? Stats Component
+const Stats = () => {
+  return (
+    <footer className="stats">
+      <em>💼You have X items on your list, and you already packed X(X%)</em>
+    </footer>
+  );
 };
