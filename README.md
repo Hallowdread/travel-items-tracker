@@ -20,7 +20,7 @@ Travel Items Tracker is a simple React application built with Vite that helps yo
 - Displays a list of added items.
 - Check button to mark items as completed.
 - Remove button to delete items from the list.
-- A Footer that tracks the number of items on your list, and your already packed items(in percentage%)
+- A Footer that tracks the number of items on your list, nhlhmgtg58rffand your already packed items(in percentage%)
 
 ## Technologies Used
 
