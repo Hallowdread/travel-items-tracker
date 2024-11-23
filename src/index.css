@@ -74,7 +74,6 @@ input {
   background-color: #5a3e2b;
   color: #ffebb3;
   padding: 4rem 0;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -129,4 +128,86 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+/** Mobile Responsiveness */
+@media (max-width: 390px) {
+  .app {
+    display: block;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .add-form {
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  h3,
+  select,
+  input,
+  button {
+    margin: 1rem 0;
+  }
+
+  .list {
+    text-align: center;
+  }
+
+  .list li {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    display: block;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 60px;
+  }
+
+  .add-form {
+    display: block;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+
+  h3,
+  select,
+  input,
+  button {
+    margin: 1rem 1rem;
+  }
+
+  .list {
+    text-align: center;
+  }
+
+  .list li {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 641px) {
+  h3,
+  select,
+  input,
+  button {
+    margin: 1rem 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  h3,
+  select,
+  input,
+  button {
+    margin: 1rem;
+  }
 }
