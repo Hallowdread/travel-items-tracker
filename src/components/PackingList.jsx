@@ -6,12 +6,12 @@ import PropTypes from "prop-types";
 //   { id: 3, description: "Charger", quantity: 3, packed: false },
 // ];
 
-const PackingList = ({ itemArr }) => {
+const PackingList = ({ itemArr, onDeleteItem }) => {
   return (
     <div className="list">
       <ul>
         {itemArr.map((item) => (
-          <List key={item.id} itemObj={item} />
+          <List key={item.id} itemObj={item} onDeleteItem={onDeleteItem} />
         ))}
       </ul>
     </div>
@@ -24,16 +24,17 @@ PackingList.propTypes = {
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     })
   ).isRequired,
+  onDeleteItem: PropTypes.func.isRequired,
 };
 
 //? List Component
-const List = ({ itemObj }) => {
+const List = ({ itemObj, onDeleteItem }) => {
   return (
     <li>
       <span style={itemObj.packed ? { textDecoration: "line-through" } : {}}>
         {itemObj.quantity} {itemObj.description}
       </span>
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(itemObj.id)}>❌</button>
     </li>
   );
 };
@@ -44,7 +45,9 @@ List.propTypes = {
     id: PropTypes.number.isRequired,
     quantity: PropTypes.number.isRequired,
     packed: PropTypes.bool,
+    onDeleteItem: PropTypes.func,
   }).isRequired,
+  onDeleteItem: PropTypes.func.isRequired,
 };
 
 export default PackingList;
