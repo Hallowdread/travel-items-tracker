@@ -6,12 +6,17 @@ import PropTypes from "prop-types";
 //   { id: 3, description: "Charger", quantity: 3, packed: false },
 // ];
 
-const PackingList = ({ itemArr, onDeleteItem }) => {
+const PackingList = ({ itemArr, onDeleteItem, onToggleItems }) => {
   return (
     <div className="list">
       <ul>
         {itemArr.map((item) => (
-          <List key={item.id} itemObj={item} onDeleteItem={onDeleteItem} />
+          <List
+            key={item.id}
+            itemObj={item}
+            onDeleteItem={onDeleteItem}
+            onToggleItems={onToggleItems}
+          />
         ))}
       </ul>
     </div>
@@ -25,12 +30,18 @@ PackingList.propTypes = {
     })
   ).isRequired,
   onDeleteItem: PropTypes.func.isRequired,
+  onToggleItems: PropTypes.func.isRequired,
 };
 
 //? List Component
-const List = ({ itemObj, onDeleteItem }) => {
+const List = ({ itemObj, onDeleteItem, onToggleItems }) => {
   return (
     <li>
+      <input
+        type="checkbox"
+        value={itemObj.packed}
+        onChange={() => onToggleItems(itemObj.id)}
+      />
       <span style={itemObj.packed ? { textDecoration: "line-through" } : {}}>
         {itemObj.quantity} {itemObj.description}
       </span>
@@ -48,6 +59,7 @@ List.propTypes = {
     onDeleteItem: PropTypes.func,
   }).isRequired,
   onDeleteItem: PropTypes.func.isRequired,
+  onToggleItems: PropTypes.func.isRequired,
 };
 
 export default PackingList;
