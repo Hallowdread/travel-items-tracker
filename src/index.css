@@ -16,6 +16,7 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  position: relative;
 }
 
 .app {
@@ -88,6 +89,17 @@ input {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0.8rem;
+}
+
+.clear-btn {
+  background-color: #5a3e2b;
+  position: absolute;
+  top: 300px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .list ul {

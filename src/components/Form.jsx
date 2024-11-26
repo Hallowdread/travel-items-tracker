@@ -45,7 +45,7 @@ const Form = ({ onAddItem }) => {
     </form>
   );
 };
-//* Props Validation for From Component
+//* Props Validation
 Form.propTypes = {
   onAddItem: PropTypes.func.isRequired,
 };

@@ -22,7 +22,7 @@ const PackingList = ({ itemArr, onDeleteItem, onToggleItems }) => {
     </div>
   );
 };
-//* Props Validation For PackingList Component
+//* Props Validation
 PackingList.propTypes = {
   itemArr: PropTypes.arrayOf(
     PropTypes.shape({
@@ -49,7 +49,7 @@ const List = ({ itemObj, onDeleteItem, onToggleItems }) => {
     </li>
   );
 };
-//* Props Validation for List
+//* Props Validation
 List.propTypes = {
   itemObj: PropTypes.shape({
     description: PropTypes.string.isRequired,
