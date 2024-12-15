@@ -93,12 +93,13 @@ input {
 
 .clear-btn {
   position: absolute;
-  top: 300px;
-  right: 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
+}
+
+.clear-btn button {
+  position: relative;
+  left: 700%;
+  bottom: 60px;
+  margin-left: auto;
 }
 
 .list ul {
@@ -156,13 +157,6 @@ input[type="checkbox"] {
     display: block;
     padding: 1rem 2rem;
     text-align: center;
-  }
-
-  .clear-btn {
-    top: 500px;
-    left: 220px;
-    font-size: 5px;
-    padding: 10px;
   }
 
   h3,
@@ -239,19 +233,5 @@ input[type="checkbox"] {
   input,
   button {
     margin: 1rem;
-  }
-
-  .clear-btn {
-    top: 300px;
-    left: 670px;
-    padding: 10px;
-  }
-}
-
-@media (min-width: 1279px) {
-  .clear-btn {
-    top: 300px;
-    left: 1100px;
-    padding: 10px;
   }
 }
