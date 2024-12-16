@@ -92,14 +92,14 @@ input {
 }
 
 .clear-btn {
-  position: absolute;
+  background-color: #5a3e2b;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .clear-btn button {
-  position: relative;
-  left: 700%;
-  bottom: 60px;
-  margin-left: auto;
+  overflow-x: hidden;
 }
 
 .list ul {
@@ -190,12 +190,6 @@ input[type="checkbox"] {
     text-align: center;
   }
 
-  .clear-btn {
-    top: 460px;
-    left: 270px;
-    padding: 10px;
-  }
-
   h3,
   select,
   input,
@@ -218,12 +212,6 @@ input[type="checkbox"] {
   input,
   button {
     margin: 1rem 1rem;
-  }
-
-  .clear-btn {
-    top: 340px;
-    left: 630px;
-    padding: 10px;
   }
 }
 

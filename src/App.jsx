@@ -34,12 +34,12 @@ export default function App() {
     <div className="app">
       <Logo />
       <Form onAddItem={handleItems} />
-      <ClearButton onClearItems={handleClearItems} />
       <PackingList
         itemArr={items}
         onDeleteItem={handleDeleteItem}
         onToggleItems={handleToggleItem}
       />
+      <ClearButton onClearItems={handleClearItems} />
       <Stats itemArr={items} />
     </div>
   );
