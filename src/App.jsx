@@ -26,7 +26,10 @@ export default function App() {
   }
   //? For the ClearButton component
   function handleClearItems() {
-    setItems([]);
+    const confirmed = window.confirm(
+      "Are you sure you wanna delete all items?"
+    );
+    if (confirmed) setItems([]);
   }
   //
   return (
