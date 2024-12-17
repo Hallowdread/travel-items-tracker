@@ -2,7 +2,6 @@ import "./index.css";
 import { useState } from "react";
 import Logo from "./components/Logo";
 import Form from "./components/Form";
-import ClearButton from "./components/ClearButton";
 import PackingList from "./components/PackingList";
 import Stats from "./components/Stats";
 
@@ -38,8 +37,8 @@ export default function App() {
         itemArr={items}
         onDeleteItem={handleDeleteItem}
         onToggleItems={handleToggleItem}
+        onClearItems={handleClearItems}
       />
-      <ClearButton onClearItems={handleClearItems} />
       <Stats itemArr={items} />
     </div>
   );
